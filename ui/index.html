@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Search -->
+  <div class="card" id="search">
+    <div class="card-header">
+      Estimate Flight Delay
+    </div>
+    <div class="card-body">
+      <div class="input-group">
+
+        <div class="input-group-prepend">
+          <span class="input-group-text">Airport</span>
+        </div>
+        <input type="text" aria-label="Airport" class="form-control">
+
+        <div class="input-group-prepend">
+          <span class="input-group-text">Flight #</span>
+        </div>
+        <input type="text" aria-label="FlightNumber" class="form-control">
+
+        <select class="custom-select" id="Airline">
+          <option selected>Airline</option>
+          <option value="1">American Air Lines</option>
+          <option value="2">Delta</option>
+          <option value="3">JetBlue</option>
+        </select>
+
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">Go!</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+  <div id="overlay"></div>
+
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <p>
+      <b>Airport:</b>
+      [<span id="airport-iata-code"></span>]
+      <span id="airport-name"></span>
+      <br/>
+      <b>Location:</b>
+      <span id="airport-city"></span>,
+      <span id="airport-state"></span>
+    </p>
+
+    <table id="flight-delay-info" class="table">
+      <thead>
+        <tr>
+          <th scope="col">Airline</th>
+          <th scope="col">Arrivals</th>
+          <th scope="col">Departures</th>
+          <th scope="col">Percent Cancelled (%)</th>
+          <th scope="col">Avg. Arrival Delay (mins)</th>
+          <th scope="col">Avg. Departure Delay (mins)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">[UA] United Air Lines Inc.</th>
+          <td>25</td>
+          <td>56</td>
+          <td>43</td>
+          <td>56</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row">[AA] American Airlines Inc.</th>
+          <td>35</td>
+          <td>56</td>
+          <td>78</td>
+          <td>56</td>
+          <td>23</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" id="sidebar-close" class="btn btn-info">Close Sidebar</button>
+  </nav>
+
+  <!-- SCRIPTS -->
+  <script src="//maps.google.com/maps/api/js"></script>
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

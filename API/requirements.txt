@@ -1,8 +1,0 @@
-python-dotenv
-psycopg2
-mysql-connector==2.1.6
-numpy
-pandas
-sklearn
-lightgbm
-pickle
