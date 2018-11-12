@@ -1,0 +1,7 @@
+pickleshare
+numpy
+scipy
+pandas
+scikit-learn
+Flask
+Flask-RESTful
