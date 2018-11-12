@@ -25,5 +25,5 @@ docker run -it --publish=<host port>:5000 --name=<container name> -e MODEL_HOST=
 
 **Example query**
 ```
-http://<host IP>:<host port>/prediction?AIRLINE=DL&DAY_OF_WEEK=7&DEPARTURE_TIME=1424.0&DISTANCE=1035
+http://<host IP>:<host port>/prediction?AIRLINE=HA&DAY_OF_WEEK=4&MONTH=2&ORIGIN_AIRPORT=HNL&DESTINATION_AIRPORT=KOA
 ```
